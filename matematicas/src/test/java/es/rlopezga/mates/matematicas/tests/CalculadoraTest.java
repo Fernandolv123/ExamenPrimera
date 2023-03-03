@@ -41,4 +41,11 @@ public class CalculadoraTest {
 		//Lanza una excepcion de tipo ArithmeticException
 		Assertions.assertThrows(ArithmeticException.class, () -> {c.solucion2(1, 1, 1);});
 	}
+	
+	@Test
+	void testPrimo() {
+		Assertions.assertTrue(c.esPrimo(2));
+		Assertions.assertTrue(c.esPrimo(7));
+		Assertions.assertTrue(c.esPrimo(19));
+	}
 }
