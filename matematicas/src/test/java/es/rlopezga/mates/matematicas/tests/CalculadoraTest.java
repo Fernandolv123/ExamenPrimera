@@ -3,6 +3,8 @@ package es.rlopezga.mates.matematicas.tests;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import es.rlopezga.mates.matematicas.Calculadora;
 
@@ -47,6 +49,12 @@ public class CalculadoraTest {
 		Assertions.assertTrue(c.esPrimo(2));
 		Assertions.assertTrue(c.esPrimo(7));
 		Assertions.assertTrue(c.esPrimo(19));
+	}
+	
+	@ParameterizedTest
+	@ValueSource(ints= {2,7,19})
+	void testPrimoParametrizado(int numeros) {
+		Assertions.assertTrue(c.esPrimo(numeros));
 	}
 	
 	@Test
