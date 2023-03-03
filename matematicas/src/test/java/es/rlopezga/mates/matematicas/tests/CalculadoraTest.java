@@ -55,4 +55,9 @@ public class CalculadoraTest {
 		Assertions.assertFalse(c.esPrimo(16));
 		Assertions.assertFalse(c.esPrimo(20));
 	}
+	
+	@Test
+	void testPrimoIncorrecto() {
+		Assertions.assertThrows(ArithmeticException.class, () -> {c.esPrimo(-1);});
+	}
 }

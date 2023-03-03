@@ -47,7 +47,7 @@ public class Calculadora {
 	public boolean esPrimo(int n) throws IllegalArgumentException {
 		if (n <= 1) {
 			// el número es menor que 1, por lo tanto no es primo.
-			return false;
+			throw new ArithmeticException("No es primo");
 		} else {
 			for (int i = 2; i<= n/2; i++) {
 				if ((n % i) == 0) {
