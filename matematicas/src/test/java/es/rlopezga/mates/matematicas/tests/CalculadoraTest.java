@@ -35,4 +35,10 @@ public class CalculadoraTest {
 		//Lanza una excepcion de tipo ArithmeticException
 		Assertions.assertThrows(ArithmeticException.class, () -> {c.solucion1(1, 1, 1);});
 	}
+	
+	@Test
+	void testSolucion2Incorrecta() {
+		//Lanza una excepcion de tipo ArithmeticException
+		Assertions.assertThrows(ArithmeticException.class, () -> {c.solucion2(1, 1, 1);});
+	}
 }
