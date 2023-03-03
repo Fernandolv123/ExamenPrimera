@@ -11,12 +11,22 @@ public class CalculadoraTest {
 	private Calculadora c = new Calculadora();
 	
 	@Test
-	void testSolucion1() {
+	void testSolucion1Correcta() {
 		//solucion1 = 3
 		Assertions.assertTrue(c.solucion1(1, -5, 6) == 3);
 		//solucion1 = 3
 		Assertions.assertEquals(c.solucion1(2, -7, 3), 3);
 		//solucion = -5
 		Assertions.assertEquals(c.solucion1(-1, -7, -10), -5);
+	}
+	
+	@Test
+	void testSolucion2Correcta() {
+		//solucion 2
+		Assertions.assertEquals(c.solucion2(1, -5, 6), 2);
+		//solucion 0.5
+		Assertions.assertEquals(c.solucion2(2, -7, 3), 0.5);
+		//solucion -2
+		Assertions.assertEquals(c.solucion2(-1, -7, -10),-2);
 	}
 }

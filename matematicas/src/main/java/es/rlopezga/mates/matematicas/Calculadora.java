@@ -32,7 +32,7 @@ public class Calculadora {
 	public double solucion2(int a, int b, int c) throws ArithmeticException {
 		double d = b * b - 4.0 * a * c;  
 		if (d> 0.0) {  
-		   return (-b + Math.pow(d, 0.5)) / (2.0 * a);  
+		   return -(b + Math.pow(d, 0.5)) / (2.0 * a);  
 		} else {
 			throw new ArithmeticException("La solución no es un número real");
 		}
