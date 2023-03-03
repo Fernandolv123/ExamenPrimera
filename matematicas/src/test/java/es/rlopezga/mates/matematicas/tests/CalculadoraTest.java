@@ -48,4 +48,11 @@ public class CalculadoraTest {
 		Assertions.assertTrue(c.esPrimo(7));
 		Assertions.assertTrue(c.esPrimo(19));
 	}
+	
+	@Test
+	void testNoPrimo() {
+		Assertions.assertFalse(c.esPrimo(15));
+		Assertions.assertFalse(c.esPrimo(16));
+		Assertions.assertFalse(c.esPrimo(20));
+	}
 }
